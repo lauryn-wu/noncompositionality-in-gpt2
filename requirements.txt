@@ -1,0 +1,9 @@
+# Python dependencies for the notebooks and scripts.
+matplotlib
+numpy
+pandas
+scikit-learn
+scipy
+seaborn
+torch
+transformers

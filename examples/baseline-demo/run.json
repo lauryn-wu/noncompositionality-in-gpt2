@@ -1,0 +1,139 @@
+{
+  "kind": "demonstration_not_thesis_reproduction",
+  "started_utc": "2026-09-18T22:07:41.380936+00:00",
+  "status": "passed",
+  "config": {
+    "dataset": "MAGPIE_filtered_split_typebased.json",
+    "dataset_sha256": "9b85f321d5afae9361b4c0aaa1f9ef61cbb7257a10712f1f9c839ab91ae5a4c8",
+    "limit_per_split": 6,
+    "seed": 1,
+    "threads": 2,
+    "model": "gpt2",
+    "model_revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+    "tokens_max": 120,
+    "phrase_length": 4,
+    "confidence_threshold": 1,
+    "solver": "saga",
+    "penalty": "l2",
+    "tolerance": 0.001,
+    "max_iterations": 200,
+    "reg_cs": [
+      1e-10,
+      1e-9,
+      1e-8,
+      1e-7,
+      0.000001,
+      0.000005,
+      0.00001,
+      0.00005,
+      0.0001,
+      0.0005,
+      0.001,
+      0.01,
+      0.05,
+      1
+    ],
+    "offline": true
+  },
+  "environment": {
+    "python": "3.12.14",
+    "packages": {
+      "torch": "2.14.0",
+      "transformers": "4.57.6",
+      "numpy": "2.5.3",
+      "scikit-learn": "1.9.1",
+      "pandas": "2.2.3",
+      "scipy": "1.18.1",
+      "seaborn": "0.13.2",
+      "matplotlib": "3.11.2"
+    }
+  },
+  "limitations": [
+    "Small execution demonstration, not a reproduction of the thesis or an accuracy estimate.",
+    "Original first-prefix span matching and position-adjusted attention are retained; quote normalization preserves original token positions.",
+    "A controlled baseline/masked comparison and larger-scale memory optimization are future work."
+  ],
+  "implementation_sha256": "cfe84e1ec88bbf04aec5a18fa7c6d220920f23817a455072ffab878e4e1fde06",
+  "raw_records": 48395,
+  "eligible_counts": {
+    "train": {
+      "idiom": 723,
+      "literal": 297
+    },
+    "dev": {
+      "idiom": 45,
+      "literal": 5
+    },
+    "test": {
+      "idiom": 165,
+      "literal": 80
+    }
+  },
+  "counts": {
+    "train": {
+      "idiom": 3,
+      "literal": 3
+    },
+    "dev": {
+      "idiom": 3,
+      "literal": 3
+    },
+    "test": {
+      "idiom": 3,
+      "literal": 3
+    }
+  },
+  "selected_ids": {
+    "train": {
+      "idiom": [
+        10216,
+        39366,
+        4098
+      ],
+      "literal": [
+        258,
+        305,
+        1188
+      ]
+    },
+    "dev": {
+      "idiom": [
+        32838,
+        17670,
+        22329
+      ],
+      "literal": [
+        1959,
+        9691,
+        13084
+      ]
+    },
+    "test": {
+      "idiom": [
+        22563,
+        17443,
+        45572
+      ],
+      "literal": [
+        22,
+        252,
+        1623
+      ]
+    }
+  },
+  "retained_array_bytes": 193441344,
+  "candidate_fits": 504,
+  "warnings": [
+    {
+      "category": "PendingDeprecationWarning",
+      "message": "the matrix subclass is not the recommended way to represent matrices or deal with linear algebra (see https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html). Please adjust your code to use regular ndarray.",
+      "count": 216
+    },
+    {
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "count": 504
+    }
+  ],
+  "pipeline_seconds": 370.263
+}

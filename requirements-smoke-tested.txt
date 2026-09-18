@@ -1,0 +1,9 @@
+# Direct-package versions observed during Python 3.12.14 subset execution checks.
+matplotlib==3.11.2
+numpy==2.5.3
+pandas==2.2.3
+scikit-learn==1.9.1
+scipy==1.18.1
+seaborn==0.13.2
+torch==2.14.0
+transformers==4.57.6

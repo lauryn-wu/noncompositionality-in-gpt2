@@ -1,0 +1,21 @@
+# Local environments and generated files
+.venv/
+.cache/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+*.egg-info/
+.env
+.env.*
+
+# Original datasets and model artifacts are not included in this repository.
+en_TaskIndependentData.json
+MAGPIE_filtered_split_typebased.json
+MAGPIE_filtered_split_typebased.jsonl
+*.pt
+*.pth
+*.safetensors
+
+# Small-demo reports and plots are generated locally.
+/results/
