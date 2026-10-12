@@ -4,9 +4,42 @@ This repository contains code from Lauryn Wu's 2023 Harvard senior thesis,
 supervised by Martin Wattenberg. The research asks: how does GPT-2 represent
 expressions whose meaning is not simply the combination of their individual words?
 
+**[Read the full thesis on Harvard DASH](https://dash.harvard.edu/entities/publication/6346cebc-6c17-4dc8-add8-37011a4f1c07).**
+
 The original thesis work examines contextual embeddings and attention patterns,
 implements linear probes for paraphrase identification and literal/figurative
 usage, and investigates attention-head ablation.
+
+## Findings reported in the thesis
+
+The original study reported differences in embeddings and attention patterns
+between compositional and non-compositional phrases, especially in upper layers.
+Its probes recovered idiom paraphrases and distinguished literal from idiomatic
+usage with high accuracy on the evaluated tasks. In the usage-probing experiment,
+performance remained high after directly ablating more than 40% of attention
+heads. The linked thesis provides the experiments and their context.
+
+These are findings from the original thesis, not results of the small code demo
+included below. The current repository's verification covers a narrower scope.
+
+## Research questions and interpretation
+
+The selected experiment asks whether GPT-2's representations distinguish literal
+from figurative uses of the same kind of expression, where that information is
+available across layers, and whether attention features add information beyond
+contextual embeddings. Comparing these feature groups gives a more specific
+question than whether a classifier can recover a label at all.
+
+A successful probe shows information available to a trained readout; it does
+not by itself show that GPT-2 uses that information when processing an expression.
+The attention-head experiments address a different question about intervention,
+and require their own controlled baseline and validation.
+
+**Repository status:** the selected probing implementation has been cleaned up
+and checked on a small real-data demo. That 18-example run verifies execution;
+it is not a replication of the thesis results or a reliable accuracy estimate.
+Full-data inference and the controlled head-masking comparison remain unverified
+in this release. See [VERIFICATION.md](VERIFICATION.md) for the exact scope.
 
 ## Start here: literal versus figurative usage
 
